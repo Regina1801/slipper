@@ -1,0 +1,316 @@
+@font-face {
+  font-family: GothamPro;
+  src: url("../fonts/GothamProLight.eot"), url("../fonts/GothamProRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: GothamPro;
+  src: url("../fonts/GothamProLight/GothamProLight.eot"), url("../fonts/GothamProBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+.is-focused.is-open .choices__inner {
+  border-radius: 20px;
+}
+
+.choices .choices__inner {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.choices[data-type*=select-one]::after {
+  margin: 0;
+  width: 16px;
+  height: 8px;
+  border: none;
+  background-image: url("../img/up.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: all 0.1s ease-in-out;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin: 0;
+  background-image: url("../img/down.svg");
+}
+
+.choices__list.choices__list--dropdown.is-active {
+  border-radius: 20px;
+}
+
+.choices__item--selectable {
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+  align-items: center;
+}
+
+html {
+  font-family: GothamPro, sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  min-width: 320px;
+  max-width: 576px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 12px;
+  text-align: center;
+}
+.header__promo {
+  padding: 10px;
+  background-color: rgb(241, 157, 47);
+}
+.header--promo {
+  background-color: rgb(241, 157, 47);
+}
+.header__wrapper-logo {
+  background-color: rgb(255, 209, 172);
+}
+
+.card-block {
+  padding: 10px;
+}
+.card-block__header {
+  font-size: 19px;
+}
+.card-block__text {
+  font-weight: bold;
+  font-size: 15px;
+}
+.card-block__info {
+  padding: 10px;
+}
+.card-block__header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-block__info-rating {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.card-block__reviews {
+  margin-left: 8px;
+}
+.card-block__specifications {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.card-block__label {
+  font-size: 10px;
+  margin-left: 75px;
+  margin-bottom: 3px;
+}
+.card-block__btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 15px;
+  background: #37D997;
+  padding: 12px 20px 8px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  will-change: opacity;
+}
+.card-block__btn-link:hover {
+  opacity: 0.75;
+}
+.card-block__rating {
+  font-size: 12px;
+  color: rgb(44, 43, 49);
+}
+.card-block__link {
+  font-size: 12px;
+  color: rgb(55, 217, 151);
+}
+.card-block__product-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background: #FFD1AC;
+}
+.hero__container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__container-promo {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+.hero__logo {
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/logo-main.svg");
+  width: 218px;
+  min-width: 218px;
+  height: 54px;
+  min-height: 54px;
+  margin: 19px 0;
+}
+.hero__time {
+  min-height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 8px 6px 8px;
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  border-radius: 8px;
+  background: #F19D2F;
+  min-width: 114px;
+  will-change: width;
+  transition: width 0.5s ease-in-out;
+}
+.hero__time span {
+  display: flex;
+}
+.hero__time span:first-child {
+  font: 700 10.599px/1.2 "Gotham Pro", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.hero__timer {
+  font: 700 21.254px/1.2 "Gotham Pro", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  white-space: nowrap;
+  will-change: width;
+  transition: width 0.5s ease-in-out;
+}
+.hero__price {
+  min-height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 8px 3px 8px;
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 6px;
+  background: #37D997;
+}
+.hero__price span {
+  display: flex;
+}
+.hero__price span:first-child {
+  font: 700 18.077px/1.2 "Gotham Pro", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+  position: relative;
+}
+.hero__price span:first-child:after {
+  content: "";
+  display: block;
+  background: #E27500;
+  width: calc(100% + 4px);
+  height: 3.5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(-2px, calc(-50% - 1px), 0);
+}
+.hero__price span:last-child {
+  font: 700 22.301px/1.2 "Gotham Pro", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#slipper-display2,
+#slipper-display3,
+#slipper-display4 {
+  display: none;
+}
+
+.slipper__wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+.slipper__upper-block img {
+  height: auto;
+  width: 100%;
+}
+.slipper__lower-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 3px;
+  padding-left: 3px;
+  gap: 4px;
+}
+.slipper__lower-block img {
+  width: 100%;
+}
+.slipper__lower-block img:hover {
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.75));
+  opacity: 0.5;
+  transform: scale(1.02);
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
